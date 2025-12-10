@@ -35,4 +35,7 @@ plugins: [
     },
     }),
 ],
+ build: {
+    outDir: 'dist', 
+  },
 });
