@@ -33,7 +33,7 @@ function UserList() {
     const fetchUsers = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:3000/api/utilisateurs', { 
+        const response = await axios.get('https://api-web3-2ww0.onrender.com/api/utilisateurs', { 
           headers: {
             Authorization: `Bearer ${token}`, 
           },

@@ -136,7 +136,7 @@ function FactureAdd() {
                 facture: { ...formData, ...finalTotals }
             };
             
-            const response = await axios.post('http://localhost:3000/api/factures', newFactureData, {
+            const response = await axios.post('https://api-web3-2ww0.onrender.com/api/factures', newFactureData, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             

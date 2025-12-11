@@ -44,7 +44,7 @@ function FactureList() {
       }
 
       try {
-        const response = await axios.get('http://localhost:3000/api/factures', {
+        const response = await axios.get('https://api-web3-2ww0.onrender.com/api/factures', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -22,7 +22,7 @@ export default function LoginProvider(props: any) {
   const [isLoggedIn, setIsLoggedIn] = useState(!!initialToken); 
 
   // Utilisation de sur render VITE_API_URL
-  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api-web3-2ww0.onrender.com/api';
 
   async function login(email: string, password: string): Promise<boolean> {
     try {

@@ -56,7 +56,7 @@ function FactureFilter() {
     setLoading(true);
     setMessage('');
     
-    const apiURL = `http://localhost:3000/api/factures/${numeroRecherche}`;
+    const apiURL = `https://api-web3-2ww0.onrender.com/api/factures/${numeroRecherche}`;
     
     try {
       const response = await axios.get(apiURL, {
