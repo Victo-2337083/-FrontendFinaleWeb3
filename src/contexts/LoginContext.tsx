@@ -1,10 +1,3 @@
-/**
- * Fichier: LoginContext.tsx
- * Description: Contexte React pour la gestion de l'authentification globale
- * Auteur: Bady Pascal Fouowa ----PhenixMation
- * Version: 1.0.0
- * Date: 2025-12-04
- */
 import axios from 'axios';
 import { createContext, useState } from 'react';
 
@@ -28,9 +21,12 @@ export default function LoginProvider(props: any) {
   const [token, setToken] = useState(initialToken);
   const [isLoggedIn, setIsLoggedIn] = useState(!!initialToken); 
 
+  // Utilisation de sur render VITE_API_URL
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+
   async function login(email: string, password: string): Promise<boolean> {
     try {
-      const response = await axios.post('http://localhost:3000/api/generatetoken', {
+      const response = await axios.post(`${API_BASE_URL}/generatetoken`, {
         userLogin: {
           email: email,
           motDePasse: password, 
