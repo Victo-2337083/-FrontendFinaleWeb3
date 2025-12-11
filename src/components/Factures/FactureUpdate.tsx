@@ -209,7 +209,7 @@ function FactureUpdate() {
         }
       };
       
-      await axios.put('http://localhost:3000/api/factures', updateData, {
+      await axios.put('https://api-web3-2ww0.onrender.com/api/factures', updateData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       
